@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color : red;
+}
+header{
+    width: 90%;
+    margin: 0 auto;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+.container .logo h1::after{
+    content: ".";
+    color: var(--main-color);
+  
+}
+.container nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-decoration: wavy;
+}
+
+.container nav ul li a{
+    text-decoration: none;
+    color: grey;
+    position: relative;
+    
+}
+.container nav ul li a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    
+}
+.container nav ul li:hover a::after{
+    width: 100%;
+    transition: .7s;
+}
+section{
+    background-color:honeydew;
+    height: 100vh;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 4fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+}
+.part{
+    width: 50%;
+}
+.content .card h1{
+    font-size: 30px;
+    
+}
+.content .card :first-child{
+    margin-top: 150px;
+}
+.content .card :nth-child(2){
+    margin-top: 20px;
+}
+.content .card :nth-child(3){
+    margin-top: 20px;
+}
+.content .part {
+    display: flex;
+}
+.content .card button{
+    margin-top: 20px;
+    margin-right: 80px;
+    padding: 7px 18px;
+    float: left;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: white;
+}
+.content .card button:hover{
+    cursor: pointer;
+    background-color: rgb(75, 3, 3)
+}
+.content .card h3{
+    margin-top: 25px ;
+}
+.content .card h3:hover{
+    color: var(--main-color);
+}
+.picture{
+    width: 50%;
+    margin: 50px 0 0 250px;
+}
+.picture img{
+    width: 550px;
+}
